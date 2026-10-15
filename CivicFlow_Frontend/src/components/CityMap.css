@@ -1,0 +1,243 @@
+/* CityMap & LocationPicker Synchronized Styles */
+
+.location-map-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.map-sync-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.map-sync-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.map-sync-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.map-gps-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.map-gps-btn:hover:not(:disabled) {
+  background: #d1fae5;
+  border-color: #6ee7b7;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.2);
+}
+
+.map-gps-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.map-center-sector-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.map-center-sector-btn:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+  border-color: #cbd5e1;
+}
+
+.map-sync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.map-sync-badge.live-gps {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+}
+
+.map-helper-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.map-helper-text span.optional {
+  font-size: 10px;
+  background: #f1f5f9;
+  color: #64748b;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.picker-map {
+  height: 280px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  z-index: 1;
+}
+
+.map-location-footer-v2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  padding-top: 6px;
+}
+
+.map-coords-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e293b;
+}
+
+.map-coords-tag {
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 12px;
+  color: #0f172a;
+}
+
+.map-sector-tag {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.map-accuracy-tag {
+  background: #dcfce7;
+  color: #166534;
+  padding: 3px 7px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.map-clear-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.map-clear-btn:hover {
+  background: #fee2e2;
+}
+
+.map-gps-error {
+  font-size: 12px;
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Custom Marker Styling */
+.civicflow-map-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.marker-pin-outer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.marker-pin-inner {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+  border: 2px solid #ffffff;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.marker-pin-outer:hover .marker-pin-inner {
+  transform: rotate(-45deg) scale(1.1);
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+.marker-pin-inner svg {
+  transform: rotate(45deg);
+}
+
+.marker-pulse {
+  position: absolute;
+  bottom: -4px;
+  width: 14px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  filter: blur(1px);
+}

@@ -1,0 +1,580 @@
+/* CivicFlow Superadmin Executive Console Styles */
+.cf-superadmin-container {
+  min-height: 100vh;
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-superadmin-topbar {
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.cf-superadmin-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cf-superadmin-logo-badge {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+}
+
+.cf-superadmin-title-group h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: #f0f6fc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cf-superadmin-title-group span {
+  font-size: 11px;
+  color: #8b949e;
+}
+
+.cf-superadmin-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cf-superadmin-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  border: 1px solid #30363d;
+  background: #21262d;
+  color: #c9d1d9;
+}
+
+.cf-superadmin-nav-btn:hover {
+  background: #30363d;
+  color: #ffffff;
+  border-color: #8b949e;
+}
+
+.cf-superadmin-nav-btn.primary {
+  background: #238636;
+  border-color: #2ea043;
+  color: #ffffff;
+}
+
+.cf-superadmin-nav-btn.primary:hover {
+  background: #2ea043;
+}
+
+.cf-superadmin-user-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #21262d;
+  border: 1px solid #30363d;
+  font-size: 12px;
+  color: #c9d1d9;
+}
+
+.cf-superadmin-user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.cf-superadmin-body {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 28px 24px 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cf-superadmin-header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cf-superadmin-header h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #f0f6fc;
+  margin: 0 0 6px;
+  letter-spacing: -0.5px;
+}
+
+.cf-superadmin-header p {
+  color: #8b949e;
+  font-size: 13px;
+  margin: 0;
+  max-width: 650px;
+  line-height: 1.5;
+}
+
+.cf-superadmin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.cf-superadmin-stat-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.cf-superadmin-stat-card:hover {
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+
+.cf-superadmin-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.cf-superadmin-stat-icon.purple { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+.cf-superadmin-stat-icon.indigo { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+.cf-superadmin-stat-icon.blue { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+.cf-superadmin-stat-icon.green { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+.cf-superadmin-stat-icon.red { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+.cf-superadmin-stat-info b {
+  font-size: 22px;
+  font-weight: 800;
+  color: #f0f6fc;
+  display: block;
+  line-height: 1.2;
+}
+
+.cf-superadmin-stat-info span {
+  font-size: 11px;
+  color: #8b949e;
+  font-weight: 500;
+}
+
+/* Elevation / Privilege Assignment Box */
+.cf-superadmin-action-panel {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cf-superadmin-action-panel h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #f0f6fc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cf-superadmin-action-panel p.sub {
+  color: #8b949e;
+  font-size: 12px;
+  margin: 0 0 18px;
+}
+
+.cf-superadmin-form-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr auto;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+@media (max-width: 900px) {
+  .cf-superadmin-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cf-superadmin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cf-superadmin-field label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+.cf-superadmin-field input,
+.cf-superadmin-field select {
+  height: 42px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #f0f6fc;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.cf-superadmin-field input:focus,
+.cf-superadmin-field select:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.cf-superadmin-btn {
+  height: 42px;
+  padding: 0 20px;
+  background: #7c3aed;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.cf-superadmin-btn:hover {
+  background: #6d28d9;
+}
+
+.cf-superadmin-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* User Directory Section */
+.cf-superadmin-directory-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cf-superadmin-directory-head {
+  padding: 18px 24px;
+  border-bottom: 1px solid #30363d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cf-superadmin-directory-head h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: #f0f6fc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cf-superadmin-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cf-superadmin-search-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 36px;
+}
+
+.cf-superadmin-search-input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f0f6fc;
+  font-size: 12px;
+  width: 200px;
+}
+
+.cf-superadmin-role-pills {
+  display: flex;
+  gap: 6px;
+}
+
+.cf-superadmin-pill-btn {
+  background: #21262d;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.cf-superadmin-pill-btn:hover {
+  color: #f0f6fc;
+  border-color: #8b949e;
+}
+
+.cf-superadmin-pill-btn.active {
+  background: #388bfd1a;
+  color: #58a6ff;
+  border-color: #388bfd66;
+}
+
+/* User Table */
+.cf-superadmin-table-wrap {
+  overflow-x: auto;
+}
+
+.cf-superadmin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.cf-superadmin-table th {
+  background: #0d1117;
+  color: #8b949e;
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #30363d;
+}
+
+.cf-superadmin-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #21262d;
+  color: #c9d1d9;
+}
+
+.cf-superadmin-table tr:hover td {
+  background: #1c2128;
+}
+
+.cf-superadmin-user-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cf-superadmin-cell-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.cf-superadmin-cell-avatar.superadmin { background: #6d28d9; color: #ede9fe; }
+.cf-superadmin-cell-avatar.admin { background: #3730a3; color: #e0e7ff; }
+.cf-superadmin-cell-avatar.officer { background: #1e40af; color: #dbeafe; }
+.cf-superadmin-cell-avatar.citizen { background: #166534; color: #dcfce7; }
+
+.cf-superadmin-user-name {
+  font-weight: 600;
+  color: #f0f6fc;
+  display: block;
+}
+
+.cf-superadmin-user-email {
+  font-size: 11px;
+  color: #8b949e;
+  display: block;
+}
+
+.cf-superadmin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.cf-superadmin-badge.superadmin {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.cf-superadmin-badge.admin {
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+}
+
+.cf-superadmin-badge.officer {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.cf-superadmin-badge.citizen {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.cf-superadmin-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.cf-superadmin-status-dot.active { background: #22c55e; }
+.cf-superadmin-status-dot.revoked { background: #ef4444; }
+
+.cf-superadmin-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cf-superadmin-table-btn {
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #30363d;
+  background: #21262d;
+  color: #c9d1d9;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s;
+}
+
+.cf-superadmin-table-btn:hover {
+  background: #30363d;
+  color: #f0f6fc;
+}
+
+.cf-superadmin-table-btn.revoke {
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.cf-superadmin-table-btn.revoke:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.cf-superadmin-table-btn.elevate {
+  color: #a78bfa;
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.cf-superadmin-table-btn.elevate:hover {
+  background: rgba(139, 92, 246, 0.15);
+}
+
+.cf-superadmin-notice-bar {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cf-superadmin-notice-bar.success {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #4ade80;
+}
+
+.cf-superadmin-notice-bar.error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #f87171;
+}
+
+.cf-superadmin-governance-footer {
+  margin-top: 36px;
+  padding: 18px 22px;
+  background: #161b22;
+  border: 1px dashed #30363d;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #8b949e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.cf-superadmin-governance-footer svg {
+  flex-shrink: 0;
+  color: #8b5cf6;
+}

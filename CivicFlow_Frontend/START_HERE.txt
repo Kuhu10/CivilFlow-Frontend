@@ -1,0 +1,33 @@
+CIVICFLOW FRONTEND — QUICK START (WINDOWS)
+========================================
+
+1. Extract this folder beside your existing CivicFlow_Backend folder.
+
+2. Open THIS CivicFlow_Frontend folder in VS Code (not the backend folder).
+
+3. In the VS Code PowerShell terminal, check Node and npm:
+   node --version
+   npm --version
+   If either command is not recognized, install Node.js LTS from https://nodejs.org/ and restart VS Code.
+
+4. Create the local frontend environment file:
+   Copy-Item .env.example .env
+
+5. Install frontend packages (first install needs internet and may take a few minutes):
+   npm install
+
+6. Keep your backend running on http://127.0.0.1:8000, then start the frontend:
+   npm run dev
+
+7. Open http://localhost:5173 in your browser.
+
+API ADDRESS
+===========
+The .env file should contain:
+VITE_API_BASE_URL=http://127.0.0.1:8000/api/v1
+
+If the browser reports a CORS error, open the backend's .env and set:
+CORS_ORIGINS=http://localhost:5173,http://localhost:3000,http://localhost:8501
+Then restart/rebuild the backend container from CivicFlow_Backend.
+
+Do NOT put GEMINI_API_KEY, DATABASE_URL, database password, or SECRET_KEY into the frontend .env.
